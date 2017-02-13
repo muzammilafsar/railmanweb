@@ -26,7 +26,7 @@ SECRET_KEY = 'q6n^#_e4lr%28r(8v2vber4zq#24mz3a3+6e&6df6^c8-hj^es'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['railmanbot.herokuapp.com']
 
 
 # Application definition
