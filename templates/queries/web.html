@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% block body %}
+
+ <div class="container" style="margin-top: 20px;margin-bottom: 20px;">
+    <h1 style="text-align: center;font-family: 'Bahiana', cursive; font-size: 500%;color: #2C3E50  ">CHECK PNR STATUS</h1>
+    </div>
+
+<div class="container" >
+<div class="form-group col-sm-12 col-md-4 col-centered">
+  <form method="post" action="{% url 'status' %}">
+      {% csrf_token %}
+  <input type="number" placeholder="Enter 10 Digit PNR Number" class="form-control" id="pnr" name="pnr" required>
+
+  <div style="text-align:center">
+    <button type="submit" style="margin-top:10px " class="btn btn-primary ">Check</button>
+  </div>
+  </form>
+</div>
+<div>
+
+ <div class="panel-heading"><h3 style="color: #BFC9CA">{% if answer.error  %} {{ answer.error }}{% endif %}</h3></div>
+{#<div ><h3 style="color: #BFC9CA">{% if error  %} {{ error }}{% endif %}</h3></div>#}
+<h3 style="text-align: center;font-family:Righteous ;background-color: white; color: crimson ">{{ error }}</h3>
+{% if response_code == 200 %}
+<div style="margin-top: 20pt">
+<div class="table-responsive col-lg-6 col-md-6 col-centered" >
+     
+  <table class="table" style="background-color: aliceblue;">
+    
+    
+      <tr>
+        <td><b>PNR NO.</b></td>
+        <td>{{ answer.pnr_no }}</td>
+      </tr>
+	  <tr>
+        <td><b>Date of Journey</b></td>
+        <td>{{ answer.date_of_journey }}</td>
+      </tr>
+	  <tr>
+        <td><b>From</b></td>
+        <td>{{ answer.from }}</td>
+      </tr>
+	  <tr>
+        <td><b>TO</b></td>
+        <td>{{ answer.to }}</td>
+      </tr>
+	  <tr>
+        <td><b>Train Number</b></td>
+        <td>{{ answer.train_no }}</td>
+      </tr>
+	  <tr>
+        <td><b>Train Name</b></td>
+        <td>{{ answer.train_name }}</td>
+      </tr>
+        <tr>
+        <td><b>Chart Prepared</b></td>
+        <td>{% if 'N' in answer.chart_prepared %}
+            {{ "not prepared" }}
+            {% else %}
+            {{ "Yes" }}
+            {% endif %}</td>
+      </tr>
+
+    </table>
+
+
+
+<div class="container col-lg-12 ">
+
+  <table class="table table-bordered" style="background-color: aliceblue;">
+    <thead>
+      <tr>
+        <th>Passenger No.</th>
+        <th>Booking Status</th>
+        <th>Current Status</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for p in passengers %}
+      <tr>
+        <td>{{ p.no }}</td>
+        <td>{{ p.booking_status }}</td>
+        <td>{{ p.current_status }}</td>
+      </tr>
+     {% endfor %}
+    </tbody>
+  </table>
+</div>
+ 
+</div>
+
+{% elif response_code == 204  %}
+    <div class="container" >
+    <h2 style="text-align: center">Server Down. Please Again try later</h2>
+    </div>
+{% elif response_code == 404  %}
+    <div class="container" >
+    <h2 style="text-align: center">Server Down. Please Again try later</h2>
+    </div>
+{% elif response_code == 410 %}
+    <div class="container" >
+    <h2 style="text-align: center">Old PNR number</h2>
+    </div>
+{% endif %}
+{% endblock %}
+</div>
+</div>
+</div>
