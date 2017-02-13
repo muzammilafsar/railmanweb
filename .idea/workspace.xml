@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6610ac25-4849-4a95-bb1a-a946a258da9a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/railman/settings.py" afterPath="$PROJECT_DIR$/railman/settings.py" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
@@ -38,10 +39,10 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/railman/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+            <state relative-caret-position="814">
+              <caret line="124" column="1" selection-start-line="124" selection-start-column="1" selection-end-line="124" selection-end-column="1" />
               <folding>
-                <marker date="1487002595467" expanded="true" signature="1671:2042" ph="..." />
+                <marker date="1487003749723" expanded="true" signature="1670:2041" ph="..." />
               </folding>
             </state>
           </provider>
@@ -50,7 +51,7 @@
       <file leaf-file-name="livetrain.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/queries/livetrain.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1173">
+            <state relative-caret-position="363">
               <caret line="69" column="8" selection-start-line="69" selection-start-column="8" selection-end-line="69" selection-end-column="8" />
               <folding />
             </state>
@@ -554,7 +555,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="7" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2292176" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -704,7 +705,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1904">
           <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1487003749723" expanded="true" signature="1670:2041" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -748,7 +751,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1904">
           <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1487003749723" expanded="true" signature="1670:2041" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -792,7 +797,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1887">
           <caret line="111" column="0" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1487003749723" expanded="true" signature="1670:2041" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -836,7 +843,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1887">
           <caret line="111" column="0" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1487003749723" expanded="true" signature="1670:2041" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -880,7 +889,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1887">
           <caret line="111" column="0" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1487003749723" expanded="true" signature="1670:2041" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -944,22 +955,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/queries/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/queries/livetrain.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1173">
-          <caret line="69" column="8" selection-start-line="69" selection-start-column="8" selection-end-line="69" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="969">
@@ -1005,11 +1000,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/queries/livetrain.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="69" column="8" selection-start-line="69" selection-start-column="8" selection-end-line="69" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/queries/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/railman/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="814">
+          <caret line="124" column="1" selection-start-line="124" selection-start-column="1" selection-end-line="124" selection-end-column="1" />
+          <folding>
+            <marker date="1487003749723" expanded="true" signature="1670:2041" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
