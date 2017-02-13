@@ -1,1 +1,1 @@
-web: gunicorn Trailer.wsgi --log-file -
+web: gunicorn railman.wsgi --log-file -
