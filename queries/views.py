@@ -115,3 +115,5 @@ def rescheduled_trains(request):
     else:
         return render(request,'queries/rescheduledtrains.html')
 
+def contactus(request):
+    return render(request,'queries/contactus.html')

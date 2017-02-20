@@ -22,8 +22,6 @@ urlpatterns = [
     url(r'^livetrain/$', liveTrain, name='livetrain'),
     url(r'^cancelledtrains/$', cancelled_trains, name='cancelled_trains'),
     url(r'^rescheduled/$', rescheduled_trains, name='rescheduled_trains'),
-
-
-
+    url(r'^contactus/$', contactus, name='contactus'),
 
 ]
