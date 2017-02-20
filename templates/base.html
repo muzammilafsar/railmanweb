@@ -17,16 +17,17 @@
     float: none;
     margin: 0 auto;
 }
+.table{
+    margin-bottom: 5%;
+}
 .footer {
-  position: absolute;
+  position: fixed;
+  right: 0;
   bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  font-size: large;
-  padding-top: 12pt;
-
-  background-color: darkgrey;  text-align: center;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
 }
 .body{
     background-image: url("http://www.planwallpaper.com/background-images#static/images/518164-backgrounds.jpg") ;
@@ -68,7 +69,7 @@
 
 </nav>
 
-
+<div class="footer" style="color: white;background-color: brown">Copyright © 2017 RailMan Bot<strong></strong>.</div>
 {% block body %}
 
 {% endblock %}
