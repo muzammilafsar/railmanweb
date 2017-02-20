@@ -16,7 +16,7 @@
 <div class="container" >
 <div class="form-group col-sm-12 col-md-4 col-centered">
 	<form method="post" action="{% url 'livetrain' %}">
-		<input type="number" placeholder="Enter 5 Digit Train No."class="form-control" id="number" name="train_no" required>
+		<input type="number" placeholder="Enter 5 Digit Train No." class="form-control" id="number" name="train_no" required>
     {% csrf_token %}
 		<div style="text-align:center">  
 		<button type="submit"  style="margin-top:10px " class="btn btn-primary ">Check</button>
