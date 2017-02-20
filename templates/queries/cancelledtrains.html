@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block navactive%}
+<ul class="nav navbar-nav">
+      <li ><a href="{% url 'status' %}">PNR Status</a></li>
+      <li><a href="{% url 'livetrain' %}">Live Train</a></li>
+      <li class="active"><a href="{% url 'cancelled_trains' %}">Cancelled Trains</a></li>
+
+    </ul>
+{% endblock %}
+{% block body %}
+
+<div class="container" >
+<div class="form-group col-sm-12 col-md-4 col-centered">
+	<form method="post" action="">
+        {% csrf_token %}
+		<input type="number" placeholder="Enter 5 Digit Train No."class="form-control" id="number" name="train_no" >
+        <input type="date" class="form-control" name="date" >
+		<div style="text-align:center">
+		<button type="submit"  style="margin-top:10px " class="btn btn-primary ">search</button>
+		</div>
+	</form>
+</div>
+</div>
+
+    {% if cancel == 'yes' %}<h2 style="text-align:center; background-color: aliceblue;color: crimson">'Train no {{ train_no }} has been cancelled on {{ date }}'</h2>{% elif cancel == 'no' %}<h2 style="text-align:center; background-color: aliceblue;color: crimson">'Your Train no {{ train_no }} has  not been cancelled on {{ date }}'</h2>{% endif %}
+    </div>
+        {% if data %}
+<table class="table table-bordered" style="font-family: 'Fira Sans Extra Condensed', sans-serif;background-color: aliceblue">
+    <thead>
+      <tr>
+        <th>Train No</th>
+        <th>Train Name</th>
+        <th>Start Time</th>
+		<th>Source</th>
+		<th>Destination</th>
+    </thead>
+    <tbody>
+    {% for t in data.trains %}
+      <tr>
+
+        <td>{{ t.train.number}}</td>
+        <td>{{ t.train.name}}</td>
+		<td>{{ t.train.start_time}}</td>
+		<td>{{ t.source.name}}</td>
+		<td>{{ t.dest.name}}</td>
+
+
+      </tr>
+     {% endfor %}
+    </tbody>
+  </table>
+{% endif %}
+
+{% endblock %}

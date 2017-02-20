@@ -55,7 +55,8 @@
     <ul class="nav navbar-nav">
       <li class="active"><a href="{% url 'status' %}">PNR Status</a></li>
       <li><a href="{% url 'livetrain' %}">Live Train</a></li>
-      <li><a href="#">Page 2</a></li>
+      <li><a href="{% url 'cancelled_trains' %}">Cancelled Trains</a></li>
+      <li active"><a href="{% url 'rescheduled_trains' %}">Cancelled Trains</a></li>
 
     </ul>
       {% endblock %}

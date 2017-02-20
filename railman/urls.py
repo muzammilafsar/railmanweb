@@ -20,4 +20,10 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', include('queries.urls')),
     url(r'^livetrain/$', liveTrain, name='livetrain'),
+    url(r'^cancelledtrains/$', cancelled_trains, name='cancelled_trains'),
+    url(r'^rescheduled/$', rescheduled_trains, name='rescheduled_trains'),
+
+
+
+
 ]

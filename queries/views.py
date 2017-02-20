@@ -10,12 +10,7 @@ import time,json
 # API_KEY='9z2fd4ou'
 # API_KEY='4hriszqg'
 API_KEY='bbfeijve'
-def home(request):
-
-    return render(request,'queries/index.html')
-def check_status(request,train_no):
-
-    return HttpResponse(liveTrain(train_no))
+#livetrain status
 def liveTrain(request):
     context={}
     if request.method=='POST':
@@ -35,7 +30,7 @@ def liveTrain(request):
     return render(request,'queries/livetrain.html',context)
 
 
-
+#pnr status
 def pnr_status(request):
     answer = {}
     context = {}
@@ -70,3 +65,53 @@ def pnr_status(request):
     return render(request,'queries/web.html',context)
 
 # Create your views here.
+def cancelled_trains(request):
+    context={}
+    if request.method=='POST':
+        date=request.POST.get('date')
+        train_no=request.POST.get('train_no')
+        url = "http://api.railwayapi.com/cancelled/date/" + date[8:] + '-' + date[5:7] + '-' + date[0:4] + "/apikey/" + API_KEY + "/"
+        data = json.loads(requests.get(url).text)
+        print('train'+train_no)
+        # print(data['trains'])
+        if train_no!='':
+            context.update({"train_no":train_no})
+            cancel="no"
+            for x in data['trains']:
+                if x['train']['number']==train_no:
+                    print(train_no)
+                    cancel="yes"
+            context.update({'cancel':cancel})
+
+        print(url)
+        context.update({'date':date,'data':data})
+
+        return render(request,'queries/cancelledtrains.html',context)
+    else:
+        return render(request,'queries/cancelledtrains.html')
+
+def rescheduled_trains(request):
+    context={}
+    if request.method=='POST':
+        date=request.POST.get('date')
+        train_no=request.POST.get('train_no')
+        url = "http://api.railwayapi.com/rescheduled/date/" + date[8:] + '-' + date[5:7] + '-' + date[0:4] + "/apikey/" + API_KEY + "/"
+        data = json.loads(requests.get(url).text)
+        print('train'+train_no)
+        # print(data['trains'])
+        if train_no!='':
+            context.update({"train_no":train_no})
+            cancel="no"
+            for x in data['trains']:
+                if x['train']['number']==train_no:
+                    print(train_no)
+                    cancel="yes"
+            context.update({'cancel':cancel})
+
+        print(url)
+        context.update({'date':date,'data':data})
+
+        return render(request,'queries/rescheduledtrains.html',context)
+    else:
+        return render(request,'queries/rescheduledtrains.html')
+
