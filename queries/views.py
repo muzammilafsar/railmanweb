@@ -6,10 +6,10 @@ from django.http import HttpResponse
 import requests
 import time,json
 # Create your views here.
-# API_KEY='6tu546dr'
+API_KEY='6tu546dr'
 # API_KEY='9z2fd4ou'
 # API_KEY='4hriszqg'
-API_KEY='bbfeijve'
+#API_KEY='bbfeijve'
 #livetrain status
 def liveTrain(request):
     context={}
